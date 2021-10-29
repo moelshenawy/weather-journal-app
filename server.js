@@ -21,3 +21,7 @@ app.use(express.static("website"));
 app.listen(3000, () => {
   console.log("server is runing");
 });
+
+app.get("/getData", (req, res) => {
+  res.send(projectData);
+});
