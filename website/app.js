@@ -13,10 +13,34 @@ const generate = document.querySelector("#generate");
 /* Function called by event listener */
 generate.addEventListener("click", async () => {
   const zipCode = document.querySelector("#zip").value;
-  const theUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}&units=metric`;
+  const feelings = document.querySelector("#feelings").value;
 
-  const res = await fetch(theUrl);
-  const data = await res.json();
-  const temp = data.main.temp;
-  console.log(temp);
+  // Try & Catch to check if there's an error
+  try {
+    const theUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}&units=metric`;
+
+    const res = await fetch(theUrl);
+    const data = await res.json();
+    const temp = data.main.temp;
+    console.log(temp);
+
+    // Send Post Request
+    await fetch("/setData", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        date: newDate,
+        temp: temp,
+        fellings: feelings,
+      }),
+    });
+
+    const nodeRes = await fetch("/getData");
+    const finalResaultData = await nodeRes.json();
+    console.log(finalResaultData);
+  } catch (err) {
+    console.log("Erorr:", err);
+  }
 });

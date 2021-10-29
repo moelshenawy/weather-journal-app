@@ -26,3 +26,9 @@ app.listen(3000, () => {
 app.get("/getData", (req, res) => {
   res.send(projectData);
 });
+
+// Post Route
+app.post("/setData", (req, res) => {
+  projectData = { ...req.body };
+  res.end();
+});
