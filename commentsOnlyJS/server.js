@@ -2,6 +2,8 @@
 projectData = {};
 // Express to run server and routes
 const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
 // Start up an instance of app
 const app = express();
 /* Dependencies */
