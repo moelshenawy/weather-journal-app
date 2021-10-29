@@ -1,8 +1,9 @@
 // Setup empty JS object to act as endpoint for all routes
+projectData = {};
 // Express to run server and routes
-
+const express = require("express");
 // Start up an instance of app
-
+const app = express();
 /* Dependencies */
 /* Middleware*/
 
@@ -15,7 +16,7 @@
 // Callback to debug
 
 // Initialize all route with a callback function
-
+app.use(express.static("/website"));
 // Callback function to complete GET '/all'
 
 // Post Route
