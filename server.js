@@ -22,6 +22,7 @@ app.listen(3000, () => {
   console.log("server is runing");
 });
 
+// Data Endpoint
 app.get("/getData", (req, res) => {
   res.send(projectData);
 });
