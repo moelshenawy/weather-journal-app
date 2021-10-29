@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 //Here we are configuring express to use body-parser as middle-ware.
 // Cors for cross origin allowance
-
+app.use(cors());
 // Initialize the main project folder
 
 // Spin up the server
