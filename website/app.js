@@ -1,5 +1,3 @@
-/* Global Variables */
-
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth() + 1 + "." + d.getDate() + "." + d.getFullYear();
@@ -22,7 +20,7 @@ generate.addEventListener("click", async () => {
     const res = await fetch(theUrl);
     const data = await res.json();
     const temp = data.main.temp;
-    console.log(temp);
+    // console.log(temp);
 
     // Send Post Request
     await fetch("/setData", {
@@ -33,13 +31,20 @@ generate.addEventListener("click", async () => {
       body: JSON.stringify({
         date: newDate,
         temp: temp,
-        fellings: feelings,
+        content: feelings,
       }),
     });
 
-    const nodeRes = await fetch("/getData");
-    const finalResaultData = await nodeRes.json();
-    console.log(finalResaultData);
+    // Dynamic UI
+    const dataResult = await fetch("/getData").then((res) => res.json());
+
+    document.getElementById("date").innerHTML = `Date: ${dataResult.date}`;
+    document.getElementById(
+      "content"
+    ).innerHTML = `You Feel: ${dataResult.feelings}`;
+    document.getElementById(
+      "temp"
+    ).innerHTML = `Temperature: ${dataResult.temp} <sup>O</sup>C</p>`;
   } catch (err) {
     console.log("Erorr:", err);
   }
