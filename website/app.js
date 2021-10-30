@@ -40,7 +40,7 @@ generate.addEventListener("click", async () => {
     document.getElementById("date").innerHTML = `Date: ${dataResult.date}`;
     document.getElementById(
       "content"
-    ).innerHTML = `You Feel: ${dataResult.feelings}`;
+    ).innerHTML = `You Feel: ${dataResult.content}`;
     document.getElementById(
       "temp"
     ).innerHTML = `Temperature: ${dataResult.temp} <sup>O</sup>C</p>`;
