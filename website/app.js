@@ -6,9 +6,8 @@ let newDate = d.getMonth() + 1 + "." + d.getDate() + "." + d.getFullYear();
 const apiKey = "c4249e1b8ccedb9ed46c063dea0973df";
 const generate = document.querySelector("#generate");
 
-// Event listener to add function to existing HTML DOM element
-
 /* Function called by event listener */
+// Event listener to add function to existing HTML DOM element
 generate.addEventListener("click", async () => {
   const zipCode = document.querySelector("#zip").value;
   const feelings = document.querySelector("#feelings").value;
