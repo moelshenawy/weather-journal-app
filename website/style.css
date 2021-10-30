@@ -1,3 +1,8 @@
+:root{
+  --main-color: #2196f3
+  --main-color-alt: #1787E0
+}
+
 body {
   background: #fffff8;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
