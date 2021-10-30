@@ -1,86 +1,111 @@
-:root{
-  --main-color: #2196f3
-  --main-color-alt: #1787E0
-}
-
-body {
-  background: #fffff8;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 #app {
-  display: grid;
-  grid-auto-rows: minmax(150px, auto);
-  /* grid-template-columns:  */
   height: 100vh;
-  background: #f23557;
-  color: #f0d43a;
+  background-color: teal;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr)); */
+  grid-template-areas: "header header header header" "zip zip clouds clouds" "feel feel feel feel" "entry entry entry entry" "footer footer footer footer";
   justify-content: center;
-  grid-gap: 1em;
   font-size: 20px;
   font-family: "Oswald", sans-serif;
+  color: #f3e0be;
 }
 
-.holder {
+h1 {
+  color: #363945;
+  grid-area: header;
+  text-align: center;
+  font-size: 36px;
+  margin: 20px;
+  background-color: #0072b5;
+  border: 6px solid #9bb7d4;
+}
+
+.zip {
+  grid-area: zip;
+}
+
+.feel {
+  grid-area: feel;
 }
 
 .entry {
-  background: rgba(59, 74, 107, 0.4);
+  grid-area: entry;
+  background-color: #282d3c;
+  color: #0fb782;
 }
 
-#entryHolder {
+.footer {
+  grid-area: footer;
+  color: #282d3c;
 }
 
 #date {
+  text-align: center;
 }
 
 #temp {
+  text-align: center;
 }
 
 #content {
+  text-align: center;
 }
 
 .headline {
 }
 .title {
+  text-align: center;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label {
   display: block;
-  font-size: 27px;
+  font-size: 30px;
 }
 
 input {
   display: block;
+  position: relative;
+  left: 11%;
+  top: 6%;
   height: 60px;
   width: 320px;
-  background: #22b2da;
-  color: #f0d43a;
   font-size: 20px;
   font-family: "Oswald", sans-serif;
   border: none;
+  border: 5px solid #00758f;
+  border-radius: 25px;
+  background-color: #edd59e;
+  color: #e15d44;
 }
 
 button {
+  position: relative;
+  bottom: 31%;
   width: 400px;
   height: 100px;
-  background: #3b4a6b;
-  color: #f0d43a;
+  background-color: #282d3c;
+  color: #0fb782;
   font-size: 26px;
   font-family: "Oswald", sans-serif;
   border: none;
-  box-shadow: 2px 4px 5px #444;
-}
-h1 {
-  font-size: 36px;
+  box-shadow: 0px 0px 5px 5px #0fb782;
+  cursor: pointer;
 }
 
 textarea {
-  background: #22b2da;
+  background: #edd59e;
   color: #f0d43a;
   font-size: 20px;
   font-family: "Oswald", sans-serif;
+  color: #e15d44;
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
@@ -92,7 +117,9 @@ button:focus {
 /* Style for Placeholder Text*/
 ::placeholder {
   /* Firefox, Chrome, Opera */
-  color: #f0d43a;
+  position: relative;
+  left: 5%;
+  color: #34568b;
   font-family: "Oswald", sans-serif;
 }
 
@@ -106,4 +133,28 @@ button:focus {
   /* Microsoft Edge */
   color: #f0d43a;
   font-family: "Oswald", sans-serif;
+}
+
+/* start  */
+.image {
+  grid-area: clouds;
+
+  position: relative;
+}
+.image img {
+  position: relative;
+  width: 200px;
+  max-width: 100%;
+  animation: up-and-down 5s linear infinite;
+}
+
+/* Animation */
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
 }
