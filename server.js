@@ -5,6 +5,10 @@ projectData = {};
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const port = process.env.PORT || 3000;
+
+
+
 // Start up an instance of app
 const app = express();
 /* Middleware*/
