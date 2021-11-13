@@ -22,7 +22,7 @@ app.use(cors());
 app.use(express.static("website"));
 
 // Setup Server
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("server is runing");
 });
 
