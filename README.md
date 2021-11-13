@@ -90,4 +90,5 @@ This project is a asynchronous web app that uses Web API and user data to dynami
 
 ---
 
-![AppImg](/images/air-exo_1920x1080.jpg)
+## Final Result
+![img](projectIMG/Weather-Journal-APP.png)
