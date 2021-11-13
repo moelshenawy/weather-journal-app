@@ -9,7 +9,8 @@ This project is a asynchronous web app that uses Web API and user data to dynami
 1.Type the zip code for your country (USA)
 2.Type What You Feel
 3.Then have fun with the result ;)
-* https://elshenawy-weather-app.herokuapp.com 
+
+- https://elshenawy-weather-app.herokuapp.com
 
 ---
 
@@ -74,6 +75,7 @@ This project is a asynchronous web app that uses Web API and user data to dynami
   - The button included in project HTML should have an id of generate.
 
 - Assigning Element Properties Dynamically
+
   - The div with the id, entryHolder should have three child divs with the ids:
   - date
   - temp
@@ -87,3 +89,5 @@ This project is a asynchronous web app that uses Web API and user data to dynami
   - Included in the async function to retrieve that app’s data on the client side, existing DOM elements should have their innerHTML properties dynamically set according to data returned by the app route.
 
 ---
+
+![AppImg](/images/air-exo_1920x1080.jpg)
