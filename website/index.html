@@ -10,42 +10,68 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="app">
-      <h1>Weather Journal App</h1>
-      <div class="image">
-        <img src="imgs/weather_cloud.png" alt="" />
-      </div>
-
-      <div class="zip">
-        <label for="zip">Enter Zipcode here</label>
-        <input
-          class="inputText"
-          type="text"
-          id="zip"
-          placeholder="enter zip code here"
-        />
-      </div>
-      <div class="feel">
-        <label for="feelings">How are you feeling today?</label>
-        <textarea
-          class="myInput"
-          id="feelings"
-          placeholder="Enter your feelings here"
-          rows="9"
-          cols="50"
-        ></textarea>
-        <button id="generate" type="submit">Generate</button>
-      </div>
-      <div class="entry">
-        <div class="title">Most Recent Entry</div>
-        <div id="entryHolder">
-          <div id="date"></div>
-          <div id="temp"></div>
-          <div id="content"></div>
+    <!-- Start Header  -->
+    <div class="header">
+      <div class="container">
+        <div class="text">
+          <h1>Weather Journal App</h1>
         </div>
       </div>
-      <p class="footer">&copy; 2021 El-Shenawy</p>
     </div>
+    <!-- End Header  -->
+
+    <!-- Start app section -->
+    <div class="app">
+      <div class="container">
+        <div class="box">
+          <div class="zip">
+            <label for="zip">Enter Zipcode:</label>
+            <input
+              class="inputText"
+              type="text"
+              id="zip"
+              placeholder="Enter zip code here"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End app section -->
+
+    <!-- Start Feelings  -->
+    <div class="feel">
+      <div class="container">
+        <div class="box01">
+          <label for="feelings">How are you feeling today?</label>
+          <textarea
+            class="myInput"
+            id="feelings"
+            placeholder="Enter your feelings here..."
+          ></textarea>
+          <button id="generate" type="submit">Generate</button>
+        </div>
+      </div>
+    </div>
+    <!-- Start Feelings  -->
+
+    .
+
+    <!-- Start Entry  -->
+    <div class="entry">
+      <div class="container">
+        <div class="box02">
+          <div class="title">Most Recent Entry</div>
+          <div id="entryHolder">
+            <div id="date"></div>
+            <div id="temp"></div>
+            <div id="content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Entry -->
+
+    <p class="footer">&copy; 2021 El-shenawy</p>
     <script src="app.js" type="text/javascript"></script>
   </body>
 </html>
