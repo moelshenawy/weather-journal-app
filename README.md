@@ -10,7 +10,7 @@ This project is a asynchronous web app that uses Web API and user data to dynami
 2.Type What You Feel
 3.Then have fun with the result ;)
 
-- Project Link: fwd-weather--app.herokuapp.com
+- Project Link: https://fwd-weather--app.herokuapp.com
 
 ---
 
