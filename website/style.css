@@ -13,7 +13,7 @@ body {
   background-size: cover;
   font-family: "Oswald", sans-serif;
   background-repeat: no-repeat;
-  height: 100vh;
+  position: relative;
 }
 
 .container {
@@ -59,7 +59,7 @@ body {
 }
 
 .header .container {
-  margin-top: -40px;
+  margin-top: 13px;
 }
 .header .text {
   text-align: center;
@@ -133,7 +133,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  padding-bottom: 20px;
   flex-direction: column;
 }
 
@@ -156,7 +155,7 @@ body {
   outline: 1px solid var(--main-color);
 }
 .feel .container .box01 label {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: black;
   font-weight: bold;
   font-size: 20px;
@@ -180,6 +179,7 @@ body {
   background-color: var(--main-color);
   color: white;
 }
+
 /* End app section */
 
 /* Start Entry  */
@@ -211,3 +211,12 @@ body {
   letter-spacing: 0.5px;
 }
 /* End Entry  */
+
+/* Start Footer*/
+.footer {
+  font-size: 12px;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+}
+/* End Footer*/
